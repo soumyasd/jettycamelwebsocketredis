@@ -1,0 +1,3421 @@
+{
+ "userComments": "Problem with websockets with Camel Component on Jetty. ",
+ "constants": {
+  "addressFamily": {
+   "ADDRESS_FAMILY_IPV4": 1,
+   "ADDRESS_FAMILY_IPV6": 2,
+   "ADDRESS_FAMILY_UNSPECIFIED": 0
+  },
+  "clientInfo": {
+   "cl": "25.0.1364.160-0ubuntu0.12.04.1",
+   "command_line": "/usr/lib/chromium-browser/chromium-browser --flag-switches-begin --sync-keystore-encryption --flag-switches-end",
+   "name": "Chromium",
+   "official": "unofficial",
+   "os_type": "Linux",
+   "version": "25.0.1364.160",
+   "version_mod": "Ubuntu 12.04",
+   "numericDate": 1367869820163
+  },
+  "loadFlag": {
+   "BYPASS_CACHE": 2,
+   "BYPASS_PROXY": 16384,
+   "DISABLE_CACHE": 16,
+   "DISABLE_CERT_REVOCATION_CHECKING": 2048,
+   "DISABLE_INTERCEPT": 32,
+   "DO_NOT_PROMPT_FOR_LOGIN": 33554432,
+   "DO_NOT_SAVE_COOKIES": 8192,
+   "DO_NOT_SEND_AUTH_DATA": 262144,
+   "DO_NOT_SEND_COOKIES": 131072,
+   "ENABLE_LOAD_TIMING": 128,
+   "ENABLE_UPLOAD_PROGRESS": 64,
+   "IGNORE_ALL_CERT_ERRORS": 524288,
+   "IGNORE_CERT_AUTHORITY_INVALID": 1024,
+   "IGNORE_CERT_COMMON_NAME_INVALID": 256,
+   "IGNORE_CERT_DATE_INVALID": 512,
+   "IGNORE_CERT_WRONG_USAGE": 4096,
+   "IGNORE_LIMITS": 16777216,
+   "IS_DOWNLOAD": 32768,
+   "MAIN_FRAME": 1048576,
+   "MAYBE_USER_GESTURE": 67108864,
+   "NORMAL": 0,
+   "ONLY_FROM_CACHE": 8,
+   "PREFERRING_CACHE": 4,
+   "PREFETCH": 8388608,
+   "REPORT_RAW_HEADERS": 4194304,
+   "SUB_FRAME": 2097152,
+   "VALIDATE_CACHE": 1,
+   "VERIFY_EV_CERT": 65536
+  },
+  "loadState": {
+   "CONNECTING": 8,
+   "ESTABLISHING_PROXY_TUNNEL": 6,
+   "IDLE": 0,
+   "READING_RESPONSE": 12,
+   "RESOLVING_HOST": 7,
+   "RESOLVING_HOST_IN_PROXY_SCRIPT": 5,
+   "RESOLVING_PROXY_FOR_URL": 4,
+   "SENDING_REQUEST": 10,
+   "SSL_HANDSHAKE": 9,
+   "WAITING_FOR_APPCACHE": 3,
+   "WAITING_FOR_CACHE": 2,
+   "WAITING_FOR_DELEGATE": 1,
+   "WAITING_FOR_RESPONSE": 11
+  },
+  "logEventPhase": {
+   "PHASE_BEGIN": 1,
+   "PHASE_END": 2,
+   "PHASE_NONE": 0
+  },
+  "logEventTypes": {
+   "APPCACHE_DELIVERING_CACHED_RESPONSE": 178,
+   "APPCACHE_DELIVERING_ERROR_RESPONSE": 180,
+   "APPCACHE_DELIVERING_FALLBACK_RESPONSE": 179,
+   "AUTH_PROXY": 176,
+   "AUTH_SERVER": 177,
+   "BAD_PROXY_LIST_REPORTED": 27,
+   "CANCELLED": 0,
+   "CERT_VERIFIER_JOB": 198,
+   "CERT_VERIFIER_REQUEST": 197,
+   "CERT_VERIFIER_REQUEST_BOUND_TO_JOB": 199,
+   "CHROME_EXTENSION_ABORTED_REQUEST": 191,
+   "CHROME_EXTENSION_IGNORED_DUE_TO_CONFLICT": 194,
+   "CHROME_EXTENSION_MODIFIED_HEADERS": 193,
+   "CHROME_EXTENSION_PROVIDE_AUTH_CREDENTIALS": 195,
+   "CHROME_EXTENSION_REDIRECTED_REQUEST": 192,
+   "CHROME_POLICY_ABORTED_REQUEST": 196,
+   "CONNECT_JOB_SET_SOCKET": 78,
+   "DISK_CACHE_ENTRY_IMPL": 104,
+   "DISK_CACHE_MEM_ENTRY_IMPL": 105,
+   "DNS_CONFIG_CHANGED": 184,
+   "DNS_TRANSACTION": 187,
+   "DNS_TRANSACTION_ATTEMPT": 189,
+   "DNS_TRANSACTION_QUERY": 188,
+   "DNS_TRANSACTION_RESPONSE": 190,
+   "DOWNLOAD_FILE_ANNOTATED": 222,
+   "DOWNLOAD_FILE_CLOSED": 218,
+   "DOWNLOAD_FILE_DELETED": 220,
+   "DOWNLOAD_FILE_DETACHED": 219,
+   "DOWNLOAD_FILE_ERROR": 221,
+   "DOWNLOAD_FILE_OPENED": 215,
+   "DOWNLOAD_FILE_RENAMED": 217,
+   "DOWNLOAD_ITEM_ACTIVE": 206,
+   "DOWNLOAD_ITEM_CANCELED": 214,
+   "DOWNLOAD_ITEM_COMPLETING": 212,
+   "DOWNLOAD_ITEM_FINISHED": 213,
+   "DOWNLOAD_ITEM_INTERRUPTED": 210,
+   "DOWNLOAD_ITEM_RENAMED": 209,
+   "DOWNLOAD_ITEM_RESUMED": 211,
+   "DOWNLOAD_ITEM_SAFETY_STATE_UPDATED": 207,
+   "DOWNLOAD_ITEM_UPDATED": 208,
+   "DOWNLOAD_STARTED": 204,
+   "DOWNLOAD_STREAM_DRAINED": 216,
+   "DOWNLOAD_URL_REQUEST": 205,
+   "ENTRY_CLOSE": 114,
+   "ENTRY_DOOM": 115,
+   "ENTRY_READ_DATA": 106,
+   "ENTRY_WRITE_DATA": 107,
+   "FAILED": 1,
+   "FILE_STREAM_ALIVE": 223,
+   "FILE_STREAM_BOUND_TO_OWNER": 225,
+   "FILE_STREAM_ERROR": 227,
+   "FILE_STREAM_OPEN": 226,
+   "FILE_STREAM_SOURCE": 224,
+   "FTP_COMMAND_SENT": 229,
+   "FTP_CONTROL_CONNECTION": 230,
+   "FTP_CONTROL_RESPONSE": 232,
+   "FTP_DATA_CONNECTION": 231,
+   "HOST_RESOLVER_IMPL": 3,
+   "HOST_RESOLVER_IMPL_ATTEMPT_FINISHED": 12,
+   "HOST_RESOLVER_IMPL_ATTEMPT_STARTED": 11,
+   "HOST_RESOLVER_IMPL_CACHE_HIT": 5,
+   "HOST_RESOLVER_IMPL_CREATE_JOB": 7,
+   "HOST_RESOLVER_IMPL_DNS_TASK": 17,
+   "HOST_RESOLVER_IMPL_HOSTS_HIT": 6,
+   "HOST_RESOLVER_IMPL_JOB": 8,
+   "HOST_RESOLVER_IMPL_JOB_ATTACH": 13,
+   "HOST_RESOLVER_IMPL_JOB_EVICTED": 9,
+   "HOST_RESOLVER_IMPL_JOB_REQUEST_ATTACH": 14,
+   "HOST_RESOLVER_IMPL_JOB_REQUEST_DETACH": 15,
+   "HOST_RESOLVER_IMPL_JOB_STARTED": 10,
+   "HOST_RESOLVER_IMPL_PROC_TASK": 16,
+   "HOST_RESOLVER_IMPL_REQUEST": 4,
+   "HTTP_CACHE_ADD_TO_ENTRY": 98,
+   "HTTP_CACHE_CREATE_ENTRY": 97,
+   "HTTP_CACHE_DOOM_ENTRY": 99,
+   "HTTP_CACHE_GET_BACKEND": 95,
+   "HTTP_CACHE_OPEN_ENTRY": 96,
+   "HTTP_CACHE_READ_DATA": 102,
+   "HTTP_CACHE_READ_INFO": 100,
+   "HTTP_CACHE_WRITE_DATA": 103,
+   "HTTP_CACHE_WRITE_INFO": 101,
+   "HTTP_PIPELINED_CONNECTION": 200,
+   "HTTP_PIPELINED_CONNECTION_RECEIVED_HEADERS": 202,
+   "HTTP_PIPELINED_CONNECTION_SENT_REQUEST": 201,
+   "HTTP_PIPELINED_CONNECTION_STREAM_CLOSED": 203,
+   "HTTP_STREAM_JOB": 117,
+   "HTTP_STREAM_JOB_BOUND_TO_REQUEST": 119,
+   "HTTP_STREAM_PARSER_READ_HEADERS": 166,
+   "HTTP_STREAM_REQUEST": 116,
+   "HTTP_STREAM_REQUEST_BOUND_TO_JOB": 118,
+   "HTTP_STREAM_REQUEST_PROTO": 120,
+   "HTTP_TRANSACTION_DRAIN_BODY_FOR_AUTH_RESTART": 132,
+   "HTTP_TRANSACTION_READ_BODY": 131,
+   "HTTP_TRANSACTION_READ_HEADERS": 129,
+   "HTTP_TRANSACTION_READ_RESPONSE_HEADERS": 130,
+   "HTTP_TRANSACTION_READ_TUNNEL_RESPONSE_HEADERS": 124,
+   "HTTP_TRANSACTION_RESTART_AFTER_ERROR": 133,
+   "HTTP_TRANSACTION_SEND_REQUEST": 125,
+   "HTTP_TRANSACTION_SEND_REQUEST_BODY": 127,
+   "HTTP_TRANSACTION_SEND_REQUEST_HEADERS": 126,
+   "HTTP_TRANSACTION_SEND_TUNNEL_HEADERS": 122,
+   "HTTP_TRANSACTION_SPDY_SEND_REQUEST_HEADERS": 128,
+   "HTTP_TRANSACTION_TUNNEL_READ_HEADERS": 123,
+   "HTTP_TRANSACTION_TUNNEL_SEND_REQUEST": 121,
+   "IPV6_PROBE_RUNNING": 228,
+   "NETWORK_CHANGED": 183,
+   "NETWORK_CONNECTIVITY_CHANGED": 182,
+   "NETWORK_IP_ADDRESSES_CHANGED": 181,
+   "PAC_JAVASCRIPT_ALERT": 34,
+   "PAC_JAVASCRIPT_DNS_RESOLVE": 31,
+   "PAC_JAVASCRIPT_DNS_RESOLVE_EX": 32,
+   "PAC_JAVASCRIPT_ERROR": 33,
+   "PAC_JAVASCRIPT_MY_IP_ADDRESS": 29,
+   "PAC_JAVASCRIPT_MY_IP_ADDRESS_EX": 30,
+   "PROXY_CONFIG_CHANGED": 26,
+   "PROXY_LIST_FALLBACK": 28,
+   "PROXY_SCRIPT_DECIDER": 18,
+   "PROXY_SCRIPT_DECIDER_FALLING_BACK_TO_NEXT_PAC_SOURCE": 22,
+   "PROXY_SCRIPT_DECIDER_FETCH_PAC_SCRIPT": 20,
+   "PROXY_SCRIPT_DECIDER_HAS_NO_FETCHER": 21,
+   "PROXY_SCRIPT_DECIDER_WAIT": 19,
+   "PROXY_SERVICE": 23,
+   "PROXY_SERVICE_RESOLVED_PROXY_LIST": 25,
+   "PROXY_SERVICE_WAITING_FOR_INIT_PAC": 24,
+   "REQUEST_ALIVE": 2,
+   "SOCKET_ALIVE": 37,
+   "SOCKET_BACKUP_CREATED": 86,
+   "SOCKET_BYTES_RECEIVED": 66,
+   "SOCKET_BYTES_SENT": 64,
+   "SOCKET_IN_USE": 41,
+   "SOCKET_POOL": 80,
+   "SOCKET_POOL_BOUND_TO_CONNECT_JOB": 87,
+   "SOCKET_POOL_BOUND_TO_SOCKET": 88,
+   "SOCKET_POOL_CONNECTING_N_SOCKETS": 89,
+   "SOCKET_POOL_CONNECT_JOB": 76,
+   "SOCKET_POOL_CONNECT_JOB_CONNECT": 77,
+   "SOCKET_POOL_CONNECT_JOB_TIMED_OUT": 79,
+   "SOCKET_POOL_REUSED_AN_EXISTING_SOCKET": 83,
+   "SOCKET_POOL_STALLED_MAX_SOCKETS": 81,
+   "SOCKET_POOL_STALLED_MAX_SOCKETS_PER_GROUP": 82,
+   "SOCKET_READ_ERROR": 68,
+   "SOCKET_STREAM_CONNECT": 167,
+   "SOCKET_STREAM_RECEIVED": 169,
+   "SOCKET_STREAM_SENT": 168,
+   "SOCKET_WRITE_ERROR": 69,
+   "SOCKS5_CONNECT": 43,
+   "SOCKS5_GREET_READ": 173,
+   "SOCKS5_GREET_WRITE": 172,
+   "SOCKS5_HANDSHAKE_READ": 175,
+   "SOCKS5_HANDSHAKE_WRITE": 174,
+   "SOCKS_CONNECT": 42,
+   "SOCKS_HOSTNAME_TOO_BIG": 44,
+   "SOCKS_SERVER_ERROR": 48,
+   "SOCKS_UNEXPECTEDLY_CLOSED_DURING_GREETING": 45,
+   "SOCKS_UNEXPECTEDLY_CLOSED_DURING_HANDSHAKE": 46,
+   "SOCKS_UNEXPECTED_AUTH": 49,
+   "SOCKS_UNEXPECTED_VERSION": 47,
+   "SOCKS_UNKNOWN_ADDRESS_TYPE": 50,
+   "SPARSE_DELETE_CHILDREN": 113,
+   "SPARSE_GET_RANGE": 112,
+   "SPARSE_READ": 108,
+   "SPARSE_READ_CHILD_DATA": 110,
+   "SPARSE_WRITE": 109,
+   "SPARSE_WRITE_CHILD_DATA": 111,
+   "SPDY_SESSION": 134,
+   "SPDY_SESSION_CLOSE": 152,
+   "SPDY_SESSION_GOAWAY": 145,
+   "SPDY_SESSION_NEGATIVE_INITIAL_WINDOW_SIZE": 154,
+   "SPDY_SESSION_PING": 144,
+   "SPDY_SESSION_POOL_CREATED_NEW_SESSION": 158,
+   "SPDY_SESSION_POOL_FOUND_EXISTING_SESSION": 156,
+   "SPDY_SESSION_POOL_FOUND_EXISTING_SESSION_FROM_IP_POOL": 157,
+   "SPDY_SESSION_POOL_IMPORTED_SESSION_FROM_SOCKET": 159,
+   "SPDY_SESSION_POOL_REMOVE_SESSION": 160,
+   "SPDY_SESSION_PUSHED_SYN_STREAM": 136,
+   "SPDY_SESSION_RECEIVED_WINDOW_UPDATE": 146,
+   "SPDY_SESSION_RECV_DATA": 150,
+   "SPDY_SESSION_RECV_HEADERS": 138,
+   "SPDY_SESSION_RECV_SETTING": 141,
+   "SPDY_SESSION_RST_STREAM": 142,
+   "SPDY_SESSION_SEND_CREDENTIAL": 148,
+   "SPDY_SESSION_SEND_DATA": 149,
+   "SPDY_SESSION_SEND_HEADERS": 137,
+   "SPDY_SESSION_SEND_RST_STREAM": 143,
+   "SPDY_SESSION_SEND_SETTINGS": 140,
+   "SPDY_SESSION_SENT_WINDOW_UPDATE": 147,
+   "SPDY_SESSION_STALLED_MAX_STREAMS": 153,
+   "SPDY_SESSION_STALLED_ON_SEND_WINDOW": 151,
+   "SPDY_SESSION_SYN_REPLY": 139,
+   "SPDY_SESSION_SYN_STREAM": 135,
+   "SPDY_SESSION_UPDATE_STREAMS_SEND_WINDOW_SIZE": 155,
+   "SPDY_STREAM": 161,
+   "SPDY_STREAM_ADOPTED_PUSH_STREAM": 162,
+   "SPDY_STREAM_ERROR": 165,
+   "SPDY_STREAM_UPDATE_RECV_WINDOW": 164,
+   "SPDY_STREAM_UPDATE_SEND_WINDOW": 163,
+   "SSL_CERTIFICATES_RECEIVED": 70,
+   "SSL_CHANNEL_ID_PROVIDED": 56,
+   "SSL_CHANNEL_ID_REQUESTED": 55,
+   "SSL_CLIENT_CERT_PROVIDED": 57,
+   "SSL_CLIENT_CERT_REQUESTED": 53,
+   "SSL_CONNECT": 51,
+   "SSL_GET_DOMAIN_BOUND_CERT": 54,
+   "SSL_HANDSHAKE_ERROR": 58,
+   "SSL_NSS_ERROR": 63,
+   "SSL_READ_ERROR": 59,
+   "SSL_SERVER_HANDSHAKE": 52,
+   "SSL_SOCKET_BYTES_RECEIVED": 67,
+   "SSL_SOCKET_BYTES_SENT": 65,
+   "SSL_VERIFICATION_MERGED": 62,
+   "SSL_VERSION_FALLBACK": 61,
+   "SSL_WRITE_ERROR": 60,
+   "SUBMITTED_TO_RESOLVER_THREAD": 36,
+   "TCP_ACCEPT": 40,
+   "TCP_CLIENT_SOCKET_POOL_REQUESTED_SOCKET": 84,
+   "TCP_CLIENT_SOCKET_POOL_REQUESTED_SOCKETS": 85,
+   "TCP_CONNECT": 38,
+   "TCP_CONNECT_ATTEMPT": 39,
+   "THROTTLING_DISABLED_FOR_HOST": 185,
+   "THROTTLING_REJECTED_REQUEST": 186,
+   "UDP_BYTES_RECEIVED": 72,
+   "UDP_BYTES_SENT": 73,
+   "UDP_CONNECT": 71,
+   "UDP_RECEIVE_ERROR": 74,
+   "UDP_SEND_ERROR": 75,
+   "URL_REQUEST_BLOCKED_ON_DELEGATE": 92,
+   "URL_REQUEST_JOB_BYTES_READ": 93,
+   "URL_REQUEST_JOB_FILTERED_BYTES_READ": 94,
+   "URL_REQUEST_REDIRECTED": 91,
+   "URL_REQUEST_START_JOB": 90,
+   "WAITING_FOR_PROXY_RESOLVER_THREAD": 35,
+   "WEB_SOCKET_READ_RESPONSE_HEADERS": 171,
+   "WEB_SOCKET_SEND_REQUEST_HEADERS": 170
+  },
+  "logFormatVersion": 1,
+  "logLevelType": {
+   "LOG_ALL": 0,
+   "LOG_ALL_BUT_BYTES": 1,
+   "LOG_BASIC": 2
+  },
+  "logSourceType": {
+   "CERT_VERIFIER_JOB": 14,
+   "CONNECT_JOB": 4,
+   "DISK_CACHE_ENTRY": 9,
+   "DNS_PROBER": 19,
+   "DOWNLOAD": 16,
+   "EXPONENTIAL_BACKOFF_THROTTLING": 12,
+   "FILESTREAM": 17,
+   "HOST_RESOLVER_IMPL_JOB": 8,
+   "HOST_RESOLVER_IMPL_REQUEST": 7,
+   "HTTP_PIPELINED_CONNECTION": 15,
+   "HTTP_STREAM_JOB": 11,
+   "IPV6_PROBE_JOB": 18,
+   "MEMORY_CACHE_ENTRY": 10,
+   "NONE": 0,
+   "PROXY_SCRIPT_DECIDER": 3,
+   "SOCKET": 5,
+   "SOCKET_STREAM": 2,
+   "SPDY_SESSION": 6,
+   "UDP_SOCKET": 13,
+   "URL_REQUEST": 1
+  },
+  "netError": {
+   "ABORTED": -3,
+   "ACCESS_DENIED": -10,
+   "ADDRESS_INVALID": -108,
+   "ADDRESS_IN_USE": -147,
+   "ADDRESS_UNREACHABLE": -109,
+   "ADD_USER_CERT_FAILED": -503,
+   "BAD_SSL_CLIENT_AUTH_CERT": -117,
+   "BLOCKED_BY_CLIENT": -20,
+   "CACHE_CREATE_FAILURE": -405,
+   "CACHE_MISS": -400,
+   "CACHE_OPEN_FAILURE": -404,
+   "CACHE_OPERATION_NOT_SUPPORTED": -403,
+   "CACHE_RACE": -406,
+   "CACHE_READ_FAILURE": -401,
+   "CACHE_WRITE_FAILURE": -402,
+   "CERT_AUTHORITY_INVALID": -202,
+   "CERT_COMMON_NAME_INVALID": -200,
+   "CERT_CONTAINS_ERRORS": -203,
+   "CERT_DATE_INVALID": -201,
+   "CERT_END": -212,
+   "CERT_ERROR_IN_SSL_RENEGOTIATION": -116,
+   "CERT_INVALID": -207,
+   "CERT_NON_UNIQUE_NAME": -210,
+   "CERT_NO_REVOCATION_MECHANISM": -204,
+   "CERT_REVOKED": -206,
+   "CERT_UNABLE_TO_CHECK_REVOCATION": -205,
+   "CERT_WEAK_KEY": -211,
+   "CERT_WEAK_SIGNATURE_ALGORITHM": -208,
+   "CLIENT_AUTH_CERT_TYPE_UNSUPPORTED": -151,
+   "CONNECTION_ABORTED": -103,
+   "CONNECTION_CLOSED": -100,
+   "CONNECTION_FAILED": -104,
+   "CONNECTION_REFUSED": -102,
+   "CONNECTION_RESET": -101,
+   "CONNECTION_TIMED_OUT": -118,
+   "CONTENT_DECODING_FAILED": -330,
+   "CONTENT_LENGTH_MISMATCH": -354,
+   "DISALLOWED_URL_SCHEME": -301,
+   "DNS_CACHE_MISS": -804,
+   "DNS_MALFORMED_RESPONSE": -800,
+   "DNS_SEARCH_EMPTY": -805,
+   "DNS_SERVER_FAILED": -802,
+   "DNS_SERVER_REQUIRES_TCP": -801,
+   "DNS_SORT_ERROR": -806,
+   "DNS_TIMED_OUT": -803,
+   "EMPTY_RESPONSE": -324,
+   "ENCODING_CONVERSION_FAILED": -333,
+   "ENCODING_DETECTION_FAILED": -340,
+   "FAILED": -2,
+   "FILE_EXISTS": -16,
+   "FILE_NOT_FOUND": -6,
+   "FILE_NO_SPACE": -18,
+   "FILE_PATH_TOO_LONG": -17,
+   "FILE_TOO_BIG": -8,
+   "FILE_VIRUS_INFECTED": -19,
+   "FTP_BAD_COMMAND_SEQUENCE": -607,
+   "FTP_COMMAND_NOT_SUPPORTED": -606,
+   "FTP_FAILED": -601,
+   "FTP_FILE_BUSY": -604,
+   "FTP_SERVICE_UNAVAILABLE": -602,
+   "FTP_SYNTAX_ERROR": -605,
+   "FTP_TRANSFER_ABORTED": -603,
+   "HOST_RESOLVER_QUEUE_TOO_LARGE": -119,
+   "HTTPS_PROXY_TUNNEL_RESPONSE": -140,
+   "IMPORT_CA_CERT_FAILED": -705,
+   "IMPORT_CA_CERT_NOT_CA": -703,
+   "IMPORT_CERT_ALREADY_EXISTS": -704,
+   "IMPORT_SERVER_CERT_FAILED": -706,
+   "INCOMPLETE_CHUNKED_ENCODING": -355,
+   "INCOMPLETE_SPDY_HEADERS": -347,
+   "INSECURE_RESPONSE": -501,
+   "INSUFFICIENT_RESOURCES": -12,
+   "INTERNET_DISCONNECTED": -106,
+   "INVALID_ARGUMENT": -4,
+   "INVALID_AUTH_CREDENTIALS": -338,
+   "INVALID_CHUNKED_ENCODING": -321,
+   "INVALID_HANDLE": -5,
+   "INVALID_RESPONSE": -320,
+   "INVALID_SPDY_STREAM": -335,
+   "INVALID_URL": -300,
+   "IO_PENDING": -1,
+   "KEY_GENERATION_FAILED": -710,
+   "MALFORMED_IDENTITY": -329,
+   "MANDATORY_PROXY_CONFIGURATION_FAILED": -131,
+   "METHOD_NOT_SUPPORTED": -322,
+   "MISCONFIGURED_AUTH_ENVIRONMENT": -343,
+   "MISSING_AUTH_CREDENTIALS": -341,
+   "MSG_TOO_BIG": -142,
+   "NAME_NOT_RESOLVED": -105,
+   "NAME_RESOLUTION_FAILED": -137,
+   "NETWORK_ACCESS_DENIED": -138,
+   "NETWORK_CHANGED": -21,
+   "NETWORK_IO_SUSPENDED": -331,
+   "NOT_IMPLEMENTED": -11,
+   "NO_PRIVATE_KEY_FOR_CERT": -502,
+   "NO_SSL_VERSIONS_ENABLED": -112,
+   "NO_SUPPORTED_PROXIES": -336,
+   "NPN_NEGOTIATION_FAILED": -122,
+   "ORIGIN_BOUND_CERT_GENERATION_FAILED": -711,
+   "ORIGIN_BOUND_CERT_GENERATION_TYPE_MISMATCH": -152,
+   "OUT_OF_MEMORY": -13,
+   "PAC_NOT_IN_DHCP": -348,
+   "PAC_SCRIPT_FAILED": -327,
+   "PAC_STATUS_NOT_OK": -326,
+   "PIPELINE_EVICTION": -353,
+   "PKCS12_IMPORT_BAD_PASSWORD": -701,
+   "PKCS12_IMPORT_FAILED": -702,
+   "PKCS12_IMPORT_INVALID_FILE": -708,
+   "PKCS12_IMPORT_INVALID_MAC": -707,
+   "PKCS12_IMPORT_UNSUPPORTED": -709,
+   "PRECONNECT_MAX_SOCKET_LIMIT": -133,
+   "PRIVATE_KEY_EXPORT_FAILED": -712,
+   "PROTOCOL_SWITCHED": -146,
+   "PROXY_AUTH_REQUESTED": -127,
+   "PROXY_AUTH_UNSUPPORTED": -115,
+   "PROXY_CERTIFICATE_INVALID": -136,
+   "PROXY_CONNECTION_FAILED": -130,
+   "REQUEST_RANGE_NOT_SATISFIABLE": -328,
+   "RESPONSE_BODY_TOO_BIG_TO_DRAIN": -345,
+   "RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION": -349,
+   "RESPONSE_HEADERS_MULTIPLE_CONTENT_LENGTH": -346,
+   "RESPONSE_HEADERS_MULTIPLE_LOCATION": -350,
+   "RESPONSE_HEADERS_TOO_BIG": -325,
+   "SOCKET_NOT_CONNECTED": -15,
+   "SOCKS_CONNECTION_FAILED": -120,
+   "SOCKS_CONNECTION_HOST_UNREACHABLE": -121,
+   "SPDY_PING_FAILED": -352,
+   "SPDY_PROTOCOL_ERROR": -337,
+   "SPDY_SERVER_REFUSED_STREAM": -351,
+   "SPDY_SESSION_ALREADY_EXISTS": -143,
+   "SSL_BAD_PEER_PUBLIC_KEY": -149,
+   "SSL_BAD_RECORD_MAC_ALERT": -126,
+   "SSL_CLIENT_AUTH_CERT_NEEDED": -110,
+   "SSL_CLIENT_AUTH_CERT_NO_PRIVATE_KEY": -135,
+   "SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED": -134,
+   "SSL_CLIENT_AUTH_SIGNATURE_FAILED": -141,
+   "SSL_DECOMPRESSION_FAILURE_ALERT": -125,
+   "SSL_HANDSHAKE_NOT_COMPLETED": -148,
+   "SSL_NO_RENEGOTIATION": -123,
+   "SSL_PINNED_KEY_NOT_IN_CERT_CHAIN": -150,
+   "SSL_PROTOCOL_ERROR": -107,
+   "SSL_RENEGOTIATION_REQUESTED": -114,
+   "SSL_UNSAFE_NEGOTIATION": -128,
+   "SSL_VERSION_OR_CIPHER_MISMATCH": -113,
+   "SSL_WEAK_SERVER_EPHEMERAL_DH_KEY": -129,
+   "SYN_REPLY_NOT_RECEIVED": -332,
+   "TEMPORARILY_THROTTLED": -139,
+   "TIMED_OUT": -7,
+   "TOO_MANY_REDIRECTS": -310,
+   "TUNNEL_CONNECTION_FAILED": -111,
+   "UNDOCUMENTED_SECURITY_LIBRARY_STATUS": -344,
+   "UNEXPECTED": -9,
+   "UNEXPECTED_PROXY_AUTH": -323,
+   "UNEXPECTED_SECURITY_LIBRARY_STATUS": -342,
+   "UNKNOWN_URL_SCHEME": -302,
+   "UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT": -334,
+   "UNSAFE_PORT": -312,
+   "UNSAFE_REDIRECT": -311,
+   "UNSUPPORTED_AUTH_SCHEME": -339,
+   "UPLOAD_FILE_CHANGED": -14,
+   "WINSOCK_UNEXPECTED_WRITTEN_BYTES": -124
+  },
+  "timeTickOffset": "1367731304944"
+ },
+ "events": [
+  {
+   "phase": 1,
+   "source": {
+    "id": 299,
+    "type": 1
+   },
+   "time": "138506964",
+   "type": 2
+  },
+  {
+   "params": {
+    "load_flags": 68223105,
+    "method": "GET",
+    "priority": 4,
+    "url": "chrome://net-internals/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 299,
+    "type": 1
+   },
+   "time": "138506964",
+   "type": 90
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 299,
+    "type": 1
+   },
+   "time": "138506971",
+   "type": 90
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 299,
+    "type": 1
+   },
+   "time": "138506971",
+   "type": 2
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510428",
+   "type": 2
+  },
+  {
+   "params": {
+    "load_flags": 68223105,
+    "method": "GET",
+    "priority": 4,
+    "url": "http://localhost:8080/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510429",
+   "type": 90
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510429",
+   "type": 90
+  },
+  {
+   "params": {
+    "load_flags": 68223105,
+    "method": "GET",
+    "priority": 4,
+    "url": "http://localhost:8080/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510429",
+   "type": 90
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510429",
+   "type": 95
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510429",
+   "type": 95
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510429",
+   "type": 96
+  },
+  {
+   "params": {
+    "created": false,
+    "key": "http://localhost:8080/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510429",
+   "type": 104
+  },
+  {
+   "params": {
+    "original_url": "http://localhost:8080/",
+    "url": "http://localhost:8080/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 117
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 23
+  },
+  {
+   "params": {
+    "pac_string": "DIRECT"
+   },
+   "phase": 0,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 25
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 23
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 304,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 3
+  },
+  {
+   "params": {
+    "address_family": 0,
+    "allow_cached_response": true,
+    "host": "localhost:8080",
+    "is_speculative": false,
+    "priority": 3,
+    "source_dependency": {
+     "id": 302,
+     "type": 11
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 304,
+    "type": 7
+   },
+   "time": "138510429",
+   "type": 4
+  },
+  {
+   "params": {
+    "net_error": -804
+   },
+   "phase": 2,
+   "source": {
+    "id": 304,
+    "type": 7
+   },
+   "time": "138510429",
+   "type": 4
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 3
+  },
+  {
+   "params": {
+    "host_and_port": "localhost:8080"
+   },
+   "phase": 0,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 85
+  },
+  {
+   "params": {
+    "num_sockets": 1
+   },
+   "phase": 1,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510429",
+   "type": 89
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 305,
+    "type": 4
+   },
+   "time": "138510429",
+   "type": 76
+  },
+  {
+   "params": {
+    "group_name": "localhost:8080"
+   },
+   "phase": 1,
+   "source": {
+    "id": 305,
+    "type": 4
+   },
+   "time": "138510429",
+   "type": 77
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 306,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 305,
+    "type": 4
+   },
+   "time": "138510429",
+   "type": 3
+  },
+  {
+   "params": {
+    "address_family": 0,
+    "allow_cached_response": true,
+    "host": "localhost:8080",
+    "is_speculative": false,
+    "priority": 4,
+    "source_dependency": {
+     "id": 305,
+     "type": 4
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 306,
+    "type": 7
+   },
+   "time": "138510429",
+   "type": 4
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 306,
+    "type": 7
+   },
+   "time": "138510429",
+   "type": 7
+  },
+  {
+   "params": {
+    "host": "localhost",
+    "source_dependency": {
+     "id": 306,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510429",
+   "type": 8
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510429",
+   "type": 10
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510430",
+   "type": 16
+  },
+  {
+   "params": {
+    "attempt_number": 1
+   },
+   "phase": 0,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510430",
+   "type": 11
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 307,
+     "type": 8
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 306,
+    "type": 7
+   },
+   "time": "138510430",
+   "type": 13
+  },
+  {
+   "params": {
+    "priority": 4,
+    "source_dependency": {
+     "id": 306,
+     "type": 7
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510430",
+   "type": 14
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 89
+  },
+  {
+   "params": {
+    "original_url": "http://localhost:8080/",
+    "url": "http://localhost:8080/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 117
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 23
+  },
+  {
+   "params": {
+    "pac_string": "DIRECT"
+   },
+   "phase": 0,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 25
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 23
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 309,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 3
+  },
+  {
+   "params": {
+    "address_family": 0,
+    "allow_cached_response": true,
+    "host": "localhost:8080",
+    "is_speculative": false,
+    "priority": 3,
+    "source_dependency": {
+     "id": 308,
+     "type": 11
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 309,
+    "type": 7
+   },
+   "time": "138510430",
+   "type": 4
+  },
+  {
+   "params": {
+    "net_error": -804
+   },
+   "phase": 2,
+   "source": {
+    "id": 309,
+    "type": 7
+   },
+   "time": "138510430",
+   "type": 4
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 3
+  },
+  {
+   "params": {
+    "host_and_port": "localhost:8080"
+   },
+   "phase": 0,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 85
+  },
+  {
+   "params": {
+    "num_sockets": 2
+   },
+   "phase": 1,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 89
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 310,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 76
+  },
+  {
+   "params": {
+    "group_name": "localhost:8080"
+   },
+   "phase": 1,
+   "source": {
+    "id": 310,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 77
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 311,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 310,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 3
+  },
+  {
+   "params": {
+    "address_family": 0,
+    "allow_cached_response": true,
+    "host": "localhost:8080",
+    "is_speculative": false,
+    "priority": 4,
+    "source_dependency": {
+     "id": 310,
+     "type": 4
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 311,
+    "type": 7
+   },
+   "time": "138510430",
+   "type": 4
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 307,
+     "type": 8
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 311,
+    "type": 7
+   },
+   "time": "138510430",
+   "type": 13
+  },
+  {
+   "params": {
+    "priority": 4,
+    "source_dependency": {
+     "id": 311,
+     "type": 7
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510430",
+   "type": 14
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 89
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510430",
+   "type": 96
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510430",
+   "type": 98
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510430",
+   "type": 98
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510430",
+   "type": 100
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 302,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 117
+  },
+  {
+   "params": {
+    "buf_len": 246,
+    "index": 0,
+    "offset": 0
+   },
+   "phase": 1,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510430",
+   "type": 106
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 308,
+    "type": 11
+   },
+   "time": "138510430",
+   "type": 117
+  },
+  {
+   "params": {
+    "attempt_number": 1
+   },
+   "phase": 0,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510430",
+   "type": 12
+  },
+  {
+   "params": {
+    "address_list": [
+     "127.0.0.1:0"
+    ]
+   },
+   "phase": 2,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510430",
+   "type": 16
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 307,
+    "type": 8
+   },
+   "time": "138510430",
+   "type": 8
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 306,
+    "type": 7
+   },
+   "time": "138510430",
+   "type": 4
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 305,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 3
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 305,
+     "type": 4
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 37
+  },
+  {
+   "params": {
+    "address_list": [
+     "127.0.0.1:8080"
+    ]
+   },
+   "phase": 1,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 38
+  },
+  {
+   "params": {
+    "address": "127.0.0.1:8080"
+   },
+   "phase": 1,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 39
+  },
+  {
+   "params": {
+    "bytes_copied": 246
+   },
+   "phase": 2,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510430",
+   "type": 106
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 311,
+    "type": 7
+   },
+   "time": "138510430",
+   "type": 4
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 310,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 3
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 310,
+     "type": 4
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 313,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 37
+  },
+  {
+   "params": {
+    "address_list": [
+     "127.0.0.1:8080"
+    ]
+   },
+   "phase": 1,
+   "source": {
+    "id": 313,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 38
+  },
+  {
+   "params": {
+    "address": "127.0.0.1:8080"
+   },
+   "phase": 1,
+   "source": {
+    "id": 313,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 39
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 39
+  },
+  {
+   "params": {
+    "source_address": "127.0.0.1:48420"
+   },
+   "phase": 2,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 38
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 312,
+     "type": 5
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 305,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 78
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 305,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 77
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 305,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 76
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 313,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 39
+  },
+  {
+   "params": {
+    "source_address": "127.0.0.1:48421"
+   },
+   "phase": 2,
+   "source": {
+    "id": 313,
+    "type": 5
+   },
+   "time": "138510430",
+   "type": 38
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 313,
+     "type": 5
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 310,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 78
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 310,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 77
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 310,
+    "type": 4
+   },
+   "time": "138510430",
+   "type": 76
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 100
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 116
+  },
+  {
+   "params": {
+    "original_url": "http://localhost:8080/",
+    "url": "http://localhost:8080/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 117
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 23
+  },
+  {
+   "params": {
+    "pac_string": "DIRECT"
+   },
+   "phase": 0,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 25
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 23
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 315,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 3
+  },
+  {
+   "params": {
+    "address_family": 0,
+    "allow_cached_response": true,
+    "host": "localhost:8080",
+    "is_speculative": false,
+    "priority": 3,
+    "source_dependency": {
+     "id": 314,
+     "type": 11
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 315,
+    "type": 7
+   },
+   "time": "138510431",
+   "type": 4
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 315,
+    "type": 7
+   },
+   "time": "138510431",
+   "type": 5
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 315,
+    "type": 7
+   },
+   "time": "138510431",
+   "type": 4
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 3
+  },
+  {
+   "params": {
+    "host_and_port": "localhost:8080"
+   },
+   "phase": 0,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 84
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 80
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 312,
+     "type": 5
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 88
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 80
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 314,
+     "type": 11
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510431",
+   "type": 41
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 314,
+     "type": 11
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 118
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 300,
+     "type": 1
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 119
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 116
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 314,
+    "type": 11
+   },
+   "time": "138510431",
+   "type": 117
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 125
+  },
+  {
+   "params": {
+    "headers": [
+     "Host: localhost:8080",
+     "Connection: keep-alive",
+     "Cache-Control: max-age=0",
+     "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+     "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22 (KHTML, like Gecko) Ubuntu Chromium/25.0.1364.160 Chrome/25.0.1364.160 Safari/537.22",
+     "Accept-Encoding: gzip,deflate,sdch",
+     "Accept-Language: en-US,en;q=0.8",
+     "Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3",
+     "Cookie: [16 bytes were stripped]",
+     "If-Modified-Since: Mon, 06 May 2013 19:01:50 GMT"
+    ],
+    "line": "GET / HTTP/1.1\r\n"
+   },
+   "phase": 0,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 126
+  },
+  {
+   "params": {
+    "byte_count": 505
+   },
+   "phase": 0,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510431",
+   "type": 64
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 125
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 129
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510431",
+   "type": 166
+  },
+  {
+   "params": {
+    "byte_count": 2528
+   },
+   "phase": 0,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510487",
+   "type": 66
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510487",
+   "type": 166
+  },
+  {
+   "params": {
+    "headers": [
+     "HTTP/1.1 200 OK",
+     "Vary: Accept-Encoding",
+     "Accept-Ranges: bytes",
+     "Content-Type: text/html",
+     "Content-Length: 2339",
+     "Last-Modified: Mon, 06 May 2013 19:49:47 GMT",
+     "Server: Jetty(7.6.8.v20121106)"
+    ]
+   },
+   "phase": 0,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510487",
+   "type": 130
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510487",
+   "type": 129
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510487",
+   "type": 101
+  },
+  {
+   "params": {
+    "buf_len": 246,
+    "index": 0,
+    "offset": 0,
+    "truncate": true
+   },
+   "phase": 1,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510487",
+   "type": 107
+  },
+  {
+   "params": {
+    "bytes_copied": 246
+   },
+   "phase": 2,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510487",
+   "type": 107
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510487",
+   "type": 101
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510487",
+   "type": 103
+  },
+  {
+   "params": {
+    "buf_len": 0,
+    "index": 1,
+    "offset": 0,
+    "truncate": true
+   },
+   "phase": 1,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510487",
+   "type": 107
+  },
+  {
+   "params": {
+    "bytes_copied": 0
+   },
+   "phase": 2,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510487",
+   "type": 107
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 103
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 101
+  },
+  {
+   "params": {
+    "buf_len": 0,
+    "index": 2,
+    "offset": 0,
+    "truncate": true
+   },
+   "phase": 1,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510488",
+   "type": 107
+  },
+  {
+   "params": {
+    "bytes_copied": 0
+   },
+   "phase": 2,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510488",
+   "type": 107
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 101
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 90
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 131
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 131
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 103
+  },
+  {
+   "params": {
+    "buf_len": 2339,
+    "index": 1,
+    "offset": 0,
+    "truncate": true
+   },
+   "phase": 1,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510488",
+   "type": 107
+  },
+  {
+   "params": {
+    "bytes_copied": 2339
+   },
+   "phase": 2,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510488",
+   "type": 107
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 103
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 131
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510488",
+   "type": 41
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 131
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 103
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 103
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 300,
+    "type": 1
+   },
+   "time": "138510488",
+   "type": 2
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510489",
+   "type": 114
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 303,
+    "type": 9
+   },
+   "time": "138510489",
+   "type": 104
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 2
+  },
+  {
+   "params": {
+    "url": "ws://localhost:9292/camel-tweet"
+   },
+   "phase": 1,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 167
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 23
+  },
+  {
+   "params": {
+    "pac_string": "DIRECT"
+   },
+   "phase": 0,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 25
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 23
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 23
+  },
+  {
+   "params": {
+    "pac_string": "DIRECT"
+   },
+   "phase": 0,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 25
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 23
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 317,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 3
+  },
+  {
+   "params": {
+    "address_family": 0,
+    "allow_cached_response": true,
+    "host": "localhost:9292",
+    "is_speculative": false,
+    "priority": 3,
+    "source_dependency": {
+     "id": 316,
+     "type": 2
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 317,
+    "type": 7
+   },
+   "time": "138510498",
+   "type": 4
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 317,
+    "type": 7
+   },
+   "time": "138510498",
+   "type": 5
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 317,
+    "type": 7
+   },
+   "time": "138510498",
+   "type": 4
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 3
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 316,
+     "type": 2
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510498",
+   "type": 37
+  },
+  {
+   "params": {
+    "address_list": [
+     "127.0.0.1:9292"
+    ]
+   },
+   "phase": 1,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510498",
+   "type": 38
+  },
+  {
+   "params": {
+    "address": "127.0.0.1:9292"
+   },
+   "phase": 1,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510498",
+   "type": 39
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510498",
+   "type": 39
+  },
+  {
+   "params": {
+    "source_address": "127.0.0.1:44939"
+   },
+   "phase": 2,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510498",
+   "type": 38
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510498",
+   "type": 167
+  },
+  {
+   "params": {
+    "headers": [
+     "GET /camel-tweet HTTP/1.1",
+     "Upgrade: websocket",
+     "Connection: Upgrade",
+     "Host: localhost:9292",
+     "Origin: http://localhost:8080",
+     "Pragma: no-cache",
+     "Cache-Control: no-cache",
+     "Sec-WebSocket-Key: 5Frx/W4eM2lyZMLPVyV7QQ==",
+     "Sec-WebSocket-Version: 13",
+     "Sec-WebSocket-Extensions: x-webkit-deflate-frame",
+     "Cookie: [16 bytes were stripped]",
+     "",
+     ""
+    ]
+   },
+   "phase": 0,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510502",
+   "type": 170
+  },
+  {
+   "params": {
+    "byte_count": 314
+   },
+   "phase": 0,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510502",
+   "type": 64
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510502",
+   "type": 168
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 2
+  },
+  {
+   "params": {
+    "load_flags": 100868096,
+    "method": "GET",
+    "priority": 1,
+    "url": "http://localhost:8080/favicon.ico"
+   },
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 90
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 95
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 95
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 96
+  },
+  {
+   "params": {
+    "net_error": -2
+   },
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 96
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 97
+  },
+  {
+   "params": {
+    "created": true,
+    "key": "http://localhost:8080/favicon.ico"
+   },
+   "phase": 1,
+   "source": {
+    "id": 321,
+    "type": 9
+   },
+   "time": "138510502",
+   "type": 104
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 97
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 98
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 98
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510502",
+   "type": 116
+  },
+  {
+   "params": {
+    "original_url": "http://localhost:8080/",
+    "url": "http://localhost:8080/"
+   },
+   "phase": 1,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510502",
+   "type": 117
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510502",
+   "type": 23
+  },
+  {
+   "params": {
+    "pac_string": "DIRECT"
+   },
+   "phase": 0,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510502",
+   "type": 25
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 23
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 323,
+     "type": 7
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 3
+  },
+  {
+   "params": {
+    "address_family": 0,
+    "allow_cached_response": true,
+    "host": "localhost:8080",
+    "is_speculative": false,
+    "priority": 3,
+    "source_dependency": {
+     "id": 322,
+     "type": 11
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 323,
+    "type": 7
+   },
+   "time": "138510503",
+   "type": 4
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 323,
+    "type": 7
+   },
+   "time": "138510503",
+   "type": 5
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 323,
+    "type": 7
+   },
+   "time": "138510503",
+   "type": 4
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 3
+  },
+  {
+   "params": {
+    "host_and_port": "localhost:8080"
+   },
+   "phase": 0,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 84
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 80
+  },
+  {
+   "params": {
+    "idle_ms": 14
+   },
+   "phase": 0,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 83
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 312,
+     "type": 5
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 88
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 80
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 322,
+     "type": 11
+    }
+   },
+   "phase": 1,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510503",
+   "type": 41
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 322,
+     "type": 11
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510503",
+   "type": 118
+  },
+  {
+   "params": {
+    "source_dependency": {
+     "id": 319,
+     "type": 1
+    }
+   },
+   "phase": 0,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 119
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510503",
+   "type": 116
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 322,
+    "type": 11
+   },
+   "time": "138510503",
+   "type": 117
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510503",
+   "type": 125
+  },
+  {
+   "params": {
+    "headers": [
+     "Host: localhost:8080",
+     "Connection: keep-alive",
+     "Accept: */*",
+     "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.22 (KHTML, like Gecko) Ubuntu Chromium/25.0.1364.160 Chrome/25.0.1364.160 Safari/537.22",
+     "Accept-Encoding: gzip,deflate,sdch",
+     "Accept-Language: en-US,en;q=0.8",
+     "Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3"
+    ],
+    "line": "GET /favicon.ico HTTP/1.1\r\n"
+   },
+   "phase": 0,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510503",
+   "type": 126
+  },
+  {
+   "params": {
+    "byte_count": 354
+   },
+   "phase": 0,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510503",
+   "type": 64
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510503",
+   "type": 125
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510503",
+   "type": 129
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510503",
+   "type": 166
+  },
+  {
+   "params": {
+    "byte_count": 1573
+   },
+   "phase": 0,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510506",
+   "type": 66
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 166
+  },
+  {
+   "params": {
+    "headers": [
+     "HTTP/1.1 404 Not Found",
+     "Vary: Accept-Encoding",
+     "Content-Type: text/html;charset=ISO-8859-1",
+     "Cache-Control: must-revalidate,no-cache,no-store",
+     "Content-Length: 1376",
+     "Server: Jetty(7.6.8.v20121106)"
+    ]
+   },
+   "phase": 0,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 130
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 129
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 101
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 101
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 321,
+    "type": 9
+   },
+   "time": "138510506",
+   "type": 115
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 90
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 321,
+    "type": 9
+   },
+   "time": "138510506",
+   "type": 104
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 131
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 131
+  },
+  {
+   "phase": 1,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 131
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 312,
+    "type": 5
+   },
+   "time": "138510506",
+   "type": 41
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 131
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 319,
+    "type": 1
+   },
+   "time": "138510506",
+   "type": 2
+  },
+  {
+   "params": {
+    "byte_count": 1461
+   },
+   "phase": 0,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510537",
+   "type": 66
+  },
+  {
+   "phase": 0,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510537",
+   "type": 169
+  },
+  {
+   "params": {
+    "headers": [
+     "HTTP/1.1 500 Server Error",
+     "Cache-Control: must-revalidate,no-cache,no-store",
+     "Content-Type: text/html;charset=ISO-8859-1",
+     "Content-Length: 1284",
+     "Server: Jetty(7.6.8.v20121106)",
+     "",
+     ""
+    ]
+   },
+   "phase": 0,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510537",
+   "type": 171
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 316,
+    "type": 2
+   },
+   "time": "138510537",
+   "type": 2
+  },
+  {
+   "phase": 2,
+   "source": {
+    "id": 318,
+    "type": 5
+   },
+   "time": "138510537",
+   "type": 37
+  }
+ ],
+ "polledData": {
+  "historicNetworkStats": {
+   "historic_original_content_length": "2724490296",
+   "historic_received_content_length": "2724490296"
+  },
+  "prerenderInfo": {
+   "active": [],
+   "enabled": true,
+   "enabled_note": "",
+   "history": [],
+   "omnibox_enabled": false
+  },
+  "proxySettings": {
+   "effective": {
+    "source": "SYSTEM FAILED"
+   },
+   "original": {
+    "source": "SYSTEM FAILED"
+   }
+  },
+  "badProxies": [],
+  "httpCacheInfo": {
+   "stats": {
+    "Create error": "0x0",
+    "Create hit": "0x915e",
+    "Create miss": "0x0",
+    "Current size": "253645288",
+    "Doom cache": "0x0",
+    "Doom entry": "0x3965",
+    "Doom recent entries": "0x0",
+    "Entries": "22604",
+    "Fatal error": "0x0",
+    "Get rankings": "0x0",
+    "Invalid entry": "0x2",
+    "Last report": "0x2e3a67cce7eb19",
+    "Last report timer": "0x0",
+    "Max entries": "0x1c",
+    "Max size": "335544320",
+    "Open entries": "0x1",
+    "Open hit": "0x2a6e",
+    "Open miss": "0x91b5",
+    "Open rankings": "0x3df37",
+    "Pending IO": "0",
+    "Read data": "0x5882",
+    "Resurrect hit": "0x0",
+    "Size00": "0x0000ba5c",
+    "Size01": "0x000009c1",
+    "Size02": "0x00002134",
+    "Size03": "0x00000843",
+    "Size04": "0x00000348",
+    "Size05": "0x000002d1",
+    "Size06": "0x0000021a",
+    "Size07": "0x0000017a",
+    "Size08": "0x00000129",
+    "Size09": "0x00000144",
+    "Size10": "0x00000088",
+    "Size11": "0x00000104",
+    "Size12": "0x000000d7",
+    "Size13": "0x000000c8",
+    "Size14": "0x000000a2",
+    "Size15": "0x00000092",
+    "Size16": "0x0000017a",
+    "Size17": "0x00000174",
+    "Size18": "0x000000ac",
+    "Size19": "0x0000005e",
+    "Size20": "0x0000000f",
+    "Size21": "0x00000003",
+    "Size22": "0x00000000",
+    "Size23": "0x00000001",
+    "Size24": "0x00000000",
+    "Size25": "0x00000000",
+    "Size26": "0x00000000",
+    "Size27": "0x00000000",
+    "Timer": "0x5d5d",
+    "Trim entry": "0x0",
+    "Write data": "0x305eb",
+    "ga": {
+     "js evicted": "0x0"
+    }
+   }
+  },
+  "hostResolverInfo": {
+   "cache": {
+    "capacity": 1000,
+    "entries": [
+     {
+      "address_family": 1,
+      "addresses": [
+       "173.194.68.84"
+      ],
+      "expiration": "138204470",
+      "hostname": "accounts.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.0",
+       "74.125.228.1",
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5",
+       "74.125.228.6",
+       "74.125.228.7",
+       "74.125.228.8",
+       "74.125.228.9",
+       "74.125.228.14"
+      ],
+      "expiration": "138204475",
+      "hostname": "accounts.youtube.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.9",
+       "74.125.228.14",
+       "74.125.228.0",
+       "74.125.228.1",
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5",
+       "74.125.228.6",
+       "74.125.228.7",
+       "74.125.228.8"
+      ],
+      "expiration": "138217981",
+      "hostname": "chrome.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.8",
+       "74.125.228.9",
+       "74.125.228.14",
+       "74.125.228.0",
+       "74.125.228.1",
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5",
+       "74.125.228.6",
+       "74.125.228.7"
+      ],
+      "expiration": "138564657",
+      "hostname": "clients2.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.0",
+       "74.125.228.1",
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5",
+       "74.125.228.6",
+       "74.125.228.7",
+       "74.125.228.8",
+       "74.125.228.9",
+       "74.125.228.14"
+      ],
+      "expiration": "138205517",
+      "hostname": "clients4.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "157.166.226.25",
+       "157.166.226.26",
+       "157.166.255.18",
+       "157.166.255.19"
+      ],
+      "expiration": "138217898",
+      "hostname": "cnn.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.1",
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5",
+       "74.125.228.6",
+       "74.125.228.7",
+       "74.125.228.8",
+       "74.125.228.9",
+       "74.125.228.14",
+       "74.125.228.0"
+      ],
+      "expiration": "138204477",
+      "hostname": "docs.google.com"
+     },
+     {
+      "address_family": 1,
+      "error": -105,
+      "expiration": "138151498",
+      "hostname": "fqxydojlgb"
+     },
+     {
+      "address_family": 1,
+      "error": -105,
+      "expiration": "138151498",
+      "hostname": "gbfnqhkyqe"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5",
+       "74.125.228.6",
+       "74.125.228.7",
+       "74.125.228.8",
+       "74.125.228.9",
+       "74.125.228.14",
+       "74.125.228.0",
+       "74.125.228.1"
+      ],
+      "expiration": "138204467",
+      "hostname": "gmail.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.25",
+       "74.125.228.26",
+       "74.125.228.13"
+      ],
+      "expiration": "138204494",
+      "hostname": "googleads.g.doubleclick.net"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "173.194.68.138",
+       "173.194.68.139",
+       "173.194.68.100",
+       "173.194.68.101",
+       "173.194.68.102",
+       "173.194.68.113"
+      ],
+      "expiration": "138204466",
+      "hostname": "groups.google.com"
+     },
+     {
+      "address_family": 1,
+      "error": -105,
+      "expiration": "138151498",
+      "hostname": "kplabexecq"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "127.0.0.1"
+      ],
+      "expiration": "138570430",
+      "hostname": "localhost"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.21",
+       "74.125.228.22"
+      ],
+      "expiration": "138204497",
+      "hostname": "mail.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5",
+       "74.125.228.6",
+       "74.125.228.7",
+       "74.125.228.8",
+       "74.125.228.9",
+       "74.125.228.14",
+       "74.125.228.0",
+       "74.125.228.1"
+      ],
+      "expiration": "138477604",
+      "hostname": "safebrowsing-cache.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.6",
+       "74.125.228.7",
+       "74.125.228.8",
+       "74.125.228.9",
+       "74.125.228.14",
+       "74.125.228.0",
+       "74.125.228.1",
+       "74.125.228.2",
+       "74.125.228.3",
+       "74.125.228.4",
+       "74.125.228.5"
+      ],
+      "expiration": "138477500",
+      "hostname": "safebrowsing.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.126"
+      ],
+      "expiration": "138204504",
+      "hostname": "ssl.google-analytics.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "74.125.228.15"
+      ],
+      "expiration": "138204505",
+      "hostname": "ssl.gstatic.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "173.194.68.125"
+      ],
+      "expiration": "138205164",
+      "hostname": "talk.google.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "173.194.68.95"
+      ],
+      "expiration": "138204601",
+      "hostname": "translate.googleapis.com"
+     },
+     {
+      "address_family": 1,
+      "addresses": [
+       "173.194.75.106",
+       "173.194.75.147",
+       "173.194.75.99",
+       "173.194.75.103",
+       "173.194.75.104",
+       "173.194.75.105"
+      ],
+      "expiration": "138209463",
+      "hostname": "www.google.com"
+     }
+    ]
+   },
+   "default_address_family": 1
+  },
+  "socketPoolInfo": [
+   {
+    "connecting_socket_count": 0,
+    "groups": {
+     "localhost:8080": {
+      "active_socket_count": 0,
+      "connect_jobs": [],
+      "has_backup_job": false,
+      "idle_sockets": [
+       313,
+       312
+      ],
+      "is_stalled": false,
+      "pending_request_count": 0
+     },
+     "ssl/clients4.google.com:443": {
+      "active_socket_count": 0,
+      "connect_jobs": [],
+      "has_backup_job": false,
+      "idle_sockets": [],
+      "is_stalled": false,
+      "pending_request_count": 0
+     },
+     "ssl/www.google.com:443": {
+      "active_socket_count": 0,
+      "connect_jobs": [],
+      "has_backup_job": false,
+      "idle_sockets": [],
+      "is_stalled": false,
+      "pending_request_count": 0
+     }
+    },
+    "handed_out_socket_count": 0,
+    "idle_socket_count": 2,
+    "max_socket_count": 256,
+    "max_sockets_per_group": 6,
+    "name": "transport_socket_pool",
+    "pool_generation_number": 0,
+    "type": "transport_socket_pool"
+   },
+   {
+    "connecting_socket_count": 0,
+    "groups": {
+     "ssl/clients4.google.com:443": {
+      "active_socket_count": 0,
+      "connect_jobs": [],
+      "has_backup_job": false,
+      "idle_sockets": [],
+      "is_stalled": false,
+      "pending_request_count": 0
+     },
+     "ssl/www.google.com:443": {
+      "active_socket_count": 0,
+      "connect_jobs": [],
+      "has_backup_job": false,
+      "idle_sockets": [],
+      "is_stalled": false,
+      "pending_request_count": 0
+     }
+    },
+    "handed_out_socket_count": 0,
+    "idle_socket_count": 0,
+    "max_socket_count": 256,
+    "max_sockets_per_group": 6,
+    "name": "ssl_socket_pool",
+    "pool_generation_number": 0,
+    "type": "ssl_socket_pool"
+   }
+  ],
+  "sessionNetworkStats": {
+   "session_original_content_length": "12540",
+   "session_received_content_length": "12540"
+  },
+  "spdySessionInfo": [],
+  "spdyStatus": {
+   "force_spdy_always": false,
+   "force_spdy_over_ssl": true,
+   "next_protos": "http/1.1,spdy/2,spdy/3",
+   "spdy_enabled": true,
+   "use_alternate_protocols": true
+  },
+  "spdyAlternateProtocolMappings": [],
+  "httpPipeliningStatus": {
+   "pipelined_connection_info": [],
+   "pipelined_host_info": [],
+   "pipelining_enabled": false
+  }
+ }
+}
