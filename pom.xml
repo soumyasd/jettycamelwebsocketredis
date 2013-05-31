@@ -69,6 +69,15 @@
 
 
                 <dependency>
+                        <groupId>org.springframework.data</groupId>
+                        <artifactId>spring-data-redis</artifactId>
+                        <!-- IMPORTANT - as of 10-May-2013 the Redis Camel
+                             component only works with version 1.0.0.RELASE -->
+                        <version>1.0.0.RELEASE</version>
+                </dependency> 
+
+
+                <dependency>
                         <groupId>org.apache.camel</groupId>
                         <artifactId>camel-spring</artifactId>
                         <version>${camel.version}</version>
@@ -146,6 +155,13 @@
                     <artifactId>camel-websocket</artifactId>
                     <version>${camel.version}</version>
                 </dependency>
+
+                <dependency>
+                    <groupId>org.apache.camel</groupId>
+                    <artifactId>camel-spring-redis</artifactId>
+                    <version>${camel.version}</version>
+                </dependency>
+
                 
                 
 

@@ -5,18 +5,15 @@
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-
-
     <!-- Here we define Camel, notice the namespace it uses -->
     <camelContext xmlns="http://camel.apache.org/schema/spring" trace="true">
-        <routeBuilder ref="twitter-route-id" ></routeBuilder>
+        <routeBuilder ref="redis-sub-route-id" ></routeBuilder> 
+        
     </camelContext>
 
-    <bean id="twitter-route-id" class="demo.websocket.TwitterStreamRoute" />
 
-
-
-
+    <bean id="redis-sub-route-id" class="demo.redis.RedisSubscriberRoute" />
+    <bean id="redisserializer" class="org.springframework.data.redis.serializer.StringRedisSerializer" /> 
 
 </beans>
 
