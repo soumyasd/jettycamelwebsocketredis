@@ -33,6 +33,7 @@
         var room = {
         join: function(name) {
         this._username=name;
+        <!-- Change localhost to the IP of where the jetty server is running  -->
         var location = "ws://localhost:9292/tweetsfromstorm";
         this._ws=new WebSocket(location);
         this._ws.onmessage=this._onmessage;

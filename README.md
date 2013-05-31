@@ -12,7 +12,8 @@ In this java line from("spring-redis://localhost:6379?command=SUBSCRIBE&channels
        1.  change localhost to the IP of the Redis server 
        2.  change mychannel to name of the redischannel 
          
-
+In src/main/webapp/index.html change localhost to the IP of the machine where
+Jetty is running 
 
 To complile 
 ===================
