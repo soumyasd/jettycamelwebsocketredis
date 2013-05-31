@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>demo.websocket</groupId>
-  <artifactId>jettycamelwebsocket</artifactId>
+  <artifactId>jettycamelwebsocketredis</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-		  <name>jettycamelwebsocket Maven Webapp</name>
+		  <name>jettycamelwebsocketredis Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
 
@@ -169,7 +169,7 @@
 
   
   <build>
-        <finalName>jettycamelwebsocket</finalName>
+        <finalName>jettycamelwebsocketredis</finalName>
                 <plugins>
                         <plugin>
                                 <groupId>org.apache.maven.plugins</groupId>
@@ -197,7 +197,7 @@
 					-->
 
                                         <configuration>
-                                                <webApp>${basedir}/target/websocketserver-0.0.1-SNAPSHOT.war</webApp>
+                                                <webApp>${basedir}/target/jettycamelwebsocketredis-0.0.1-SNAPSHOT.war</webApp>
                                         </configuration>
 				<!-- see http://paulfeaviour.wordpress.com/2010/04/01/running-websocket-example-with-jetty-mavenplugin/--> 
 				<dependencies>

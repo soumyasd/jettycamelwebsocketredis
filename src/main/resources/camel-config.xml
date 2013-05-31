@@ -12,7 +12,7 @@
     </camelContext>
 
 
-    <bean id="redis-sub-route-id" class="demo.redis.RedisSubscriberRoute" />
+    <bean id="redis-sub-route-id" class="demo.websocket.RedisSubscriberRoute" />
     <bean id="redisserializer" class="org.springframework.data.redis.serializer.StringRedisSerializer" /> 
 
 </beans>
